@@ -7,27 +7,27 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 export const SidebarData = [
     {
-        title: "Quản lý tuyến đường",
+        title: "Route Management",
         icon: <MapIcon/>,
         link: "/pages/"
     },
     {
-        title: "Tuyến đường phân công",
+        title: "Route Planning",
         icon: <RouteIcon/>,
         link: "/pages/RoutePlanning/RoutePlanning.jsx"
     },
     {
-        title: "Quản lý phân công",
+        title: "Task Assignment",
         icon: <AssignmentIcon/>,
         link: "/pages/TaskAssign/TaskAssign.jsx"
     },
     {
-        title: "Quản lý tài nguyên",
+        title: "Manage Resources",
         icon: <ManageAccountsIcon/>,
-        link: "/pages/Statistics/Statistics.jsx"
+        link: "/statistics"
     },
     {
-        title: "Quản lý thông báo",
+        title: "Notifications center",
         icon: <NotificationsActiveIcon/>,
         link: ""
     },
