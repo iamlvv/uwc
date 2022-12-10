@@ -10,6 +10,7 @@ import Sidebar from './components/Sidebar';
 import TaskAssign from './pages/TaskAssign/TaskAssign';
 import UserInfo from './pages/UserInfo/UserInfo';
 import TaskManagement from './pages/TaskManagement/TaskManagement';
+import RouteManagement from './pages/RouteManagement/RouteManagement';
 import RoutePlanning from './pages/RoutePlanning/RoutePlanning';
 import NotificationCenter from './pages/Notifications/NotificationCenter';
 import Header from './components/Header';
@@ -33,6 +34,7 @@ export default function App() {
           <Route path='/taskassign' element={<TaskAssign />} />
           <Route path='/userinfo' element={<UserInfo />} />
           <Route path='/taskmanagement' element={<TaskManagement />} />
+          <Route path='/routemanagement' element={<RouteManagement />} />
           <Route path='/routeplanning' element={<RoutePlanning />} />
           <Route path='/notificationcenter' element={<NotificationCenter />} />
         </Routes>

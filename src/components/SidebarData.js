@@ -9,7 +9,7 @@ export const SidebarData = [
     {
         title: "Route Management",
         icon: <MapIcon/>,
-        link: "/pages/"
+        link: "/pages/RouteManagement/RouteManagement.jsx"
     },
     {
         title: "Route Planning",

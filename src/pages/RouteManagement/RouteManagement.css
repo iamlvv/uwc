@@ -1,0 +1,81 @@
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-left: 298px;
+}
+
+.main #heading-content {
+    min-height: 100px;
+    font-weight: 700;
+}
+
+#heading-content h3 {
+    display: inline-block;
+    padding: 36px 20px;
+}
+
+#heading-content .add-task-icon{ 
+    width: 128px;
+    height: 42px;
+    background-color: #50FD81;
+    padding: 12px 20px;
+    /* border-radius: 25px; */
+}
+
+#heading-content .add-task-icon:hover{ 
+    background-color: #FD5050;
+    color: #FFFFFF;
+}
+
+.main #table-content {
+    height: 90vh;
+    text-align: center;
+}
+
+#table-content table{
+    display: inline-block;
+}
+
+/* #table-content table thead{ */
+    /* border: 0px solid; */
+    /* background-color: #F3F4F6; */
+/* } */
+
+#table-content th, 
+#table-content td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#table-content tr {
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+#pagination {
+    /* width: 120vh; */
+    text-align: center;
+}
+
+#pagination ul {
+    display: inline-block;
+}
+
+#pagination ul li {
+    font-weight: bold;
+    display: inline;
+    margin-left: 6px;
+    padding: 11px 0 11px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0, 0.2);
+}
+
+#pagination ul li:hover {
+    background-color: black;
+    color: #FFFFFF;
+}
+
+#pagination ul li > a {
+    padding: 11px 16px;
+}

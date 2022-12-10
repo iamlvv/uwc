@@ -11,7 +11,7 @@ import Footer from '../../components/Footer';
 
 export default function VehicleDetail() {
     const { vehicleId } = useParams();
-    const item = vehicle.find((temp) => temp.id == vehicleId);
+    const item = vehicle.find((temp) => temp.id === vehicleId);
     const tempArray = data.slice(0, 2);
     const contentpart = (
         tempArray.map((temp4) => (
