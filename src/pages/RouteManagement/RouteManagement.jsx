@@ -1,7 +1,12 @@
-import React, { useState, useEffect }from 'react'
+import React, { useState}from 'react'
+import ReactDOM from "react-dom";
+import ReactPaginate from "react-paginate";
+
 import './RouteManagement.css';
 import MCPdata from "./RouteManagementData.json";
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
 import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
@@ -9,18 +14,27 @@ import Footer from '../../components/Footer'
 export default function RouteManagement() {
   const [MCPs, setMCPs] = useState(MCPdata);
   const zeroPad = (num, places) => String(num).padStart(places, '0')
-  const [currentPage, setCurrentPage] = useState(1);
-  const [infosPerPage, setInfosPerPage] = useState(12);
+  const [currentPage, setCurrentPage] = useState(1);//
+  const [infosPerPage, setInfosPerPage] = useState(10);//
+  const [open, setOpen] = React.useState(false);
   
   const indexOfLastPost = currentPage * infosPerPage;
   const indexOfFirstPost = indexOfLastPost - infosPerPage;
-  const currentPosts = MCPs.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = MCPs.slice(indexOfFirstPost, indexOfLastPost);//
   const pageNumbers = [];
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   for (let i = 1; i <= Math.ceil(MCPs.length / infosPerPage); i++){
       pageNumbers.push(i);
   }
+
+  const modalRoot = document.getElementById("root");
+  const Modal = props => {
+    return ReactDOM.createPortal(
+      <div>{props.children}</div>,
+      modalRoot
+    );
+  };
 
   return (
     <div className='w-screen h-screen'>
@@ -30,9 +44,9 @@ export default function RouteManagement() {
             <div id="heading-content">
                 <h3>Quản lý tuyến đường</h3>
                 <div className="float-right mt-10 mr-8">
-                    <a href="#" className='add-task-icon rounded-3xl'>
+                    <a href='#' onClick={() => setOpen(!open)} className='add-task-icon rounded-3xl'>
                         <ControlPointIcon style={{marginRight: "6px"}} ></ControlPointIcon>
-                        Tạo mới
+                        Generate
                     </a>
                 </div>
             </div>
@@ -70,7 +84,25 @@ export default function RouteManagement() {
                     ))}              
                 </ul>
             </div>
+
         </div>
+
+        {open && (
+          <Modal in={!open}>
+              <div className= "modal">
+                  <div className="modal-container">
+                      <div className="modal-header">
+                          <CheckCircleOutlineIcon style={{fontSize: "120px", color: "#009100"}}/>
+                          <h1>Success!</h1>
+                      </div>
+                      <div className="modal-body">
+                          <h2>You successfully generate new route.</h2>
+                          <button id="modal-btn" onClick={() => setOpen(!open)}>Continue</button>
+                      </div>
+                  </div>
+              </div>            
+          </Modal>
+        )}
         <Footer />
     </div>
   )
