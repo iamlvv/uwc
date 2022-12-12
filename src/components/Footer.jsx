@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Footer() {
     return (
-        <div className='w-full h-44 flex justify-center items-center bg-gray-200 opacity-80'>
+        <div className='w-full h-44 flex  items-center bg-gray-200 opacity-80'>
             <div className='flex-[20%] text-right pr-5'>
                 <img
                 src="https://www.globalcitizenyear.org/wp-content/uploads/2022/04/UWC-Secondary-RGB_screen.png"

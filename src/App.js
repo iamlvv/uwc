@@ -15,15 +15,19 @@ import RoutePlanning from './pages/RoutePlanning/RoutePlanning';
 import NotificationCenter from './pages/Notifications/NotificationCenter';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import NotiJanitor from './pages/Notifications/NotiJanitor';
+import NotiCollector from './pages/Notifications/NotiCollector';
+import WidgetX from './pages/Notifications/Widget';
 export default function App() {
   return (
-    <div className='w-screen h-screen'>
+    <div className='App'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<div>
             <Header />
             <Sidebar />
             <Footer />
+            {/* <WidgetX /> */}
           </div>} />
           <Route path='/statistics/mcp' element={<MCP itemsPerPage={10} />} />
           <Route path='/statistics/employee' element={<Employee itemsPerPage={8} />} />
@@ -37,6 +41,8 @@ export default function App() {
           <Route path='/routemanagement' element={<RouteManagement />} />
           <Route path='/routeplanning' element={<RoutePlanning />} />
           <Route path='/notificationcenter' element={<NotificationCenter />} />
+          <Route path='/notificationcenter/janitor' element = {<NotiJanitor itemsPerPage={8}/>} />
+          <Route path='/notificationcenter/collector' element = {<NotiCollector itemsPerPage={8} />}/>
         </Routes>
       </BrowserRouter>
 
