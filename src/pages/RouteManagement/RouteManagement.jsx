@@ -37,7 +37,7 @@ export default function RouteManagement() {
   };
 
   return (
-    <div className='w-screen h-screen'>
+    <div className=''>
         <Header />
         <Sidebar />
         <div className="main">
