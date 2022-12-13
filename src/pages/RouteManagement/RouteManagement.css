@@ -1,6 +1,5 @@
 
 .main {
-    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     margin-left: 298px;
 }
@@ -10,17 +9,14 @@
     font-weight: 700;
 }
 
-#heading-content h3 {
+#heading-content h1 {
     display: inline-block;
-    padding: 36px 20px;
+    padding: 20px 5px;
 }
 
 #heading-content .add-task-icon{ 
-    width: 128px;
-    height: 42px;
     background-color: #50FD81;
     padding: 12px 20px;
-    /* border-radius: 25px; */
 }
 
 #heading-content .add-task-icon:hover{ 
@@ -34,7 +30,9 @@
 }
 
 #table-content table{
-    display: inline-block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* #table-content table thead{ */

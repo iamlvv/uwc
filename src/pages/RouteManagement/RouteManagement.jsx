@@ -17,6 +17,7 @@ export default function RouteManagement() {
   const [currentPage, setCurrentPage] = useState(1);//
   const [infosPerPage, setInfosPerPage] = useState(10);//
   const [open, setOpen] = React.useState(false);
+  const [firstAccess, setAccess] = React.useState(false);
   
   const indexOfLastPost = currentPage * infosPerPage;
   const indexOfFirstPost = indexOfLastPost - infosPerPage;
@@ -37,53 +38,68 @@ export default function RouteManagement() {
   };
 
   return (
-    <div className=''>
+    <div className='w-screen h-screen'>
         <Header />
         <Sidebar />
         <div className="main">
             <div id="heading-content">
-                <h3>Quản lý tuyến đường</h3>
+                <h1 className='text-2xl'>Route Management</h1>
                 <div className="float-right mt-10 mr-8">
-                    <a href='#' onClick={() => setOpen(!open)} className='add-task-icon rounded-3xl'>
-                        <ControlPointIcon style={{marginRight: "6px"}} ></ControlPointIcon>
+                    <a href='#' onClick={function() {
+                        setOpen(!open);
+                        setAccess(true)
+                        }
+                    
+                    } className='add-task-icon rounded-3xl'>
                         Generate
                     </a>
                 </div>
             </div>
             
-            <div id="table-content">
-                <table>
-                    <thead className="border border-solid bg-gray-100">
-                        <tr>
-                            <th>No</th>
-                            <th>MCP ID</th>
-                            <th>MCP Location</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        {currentPosts.map((MCP) => (
-                            <tr key={MCP.id}>
-                                <td style={{width: "10vh"}}>{MCP.id}</td>
-                                <td style={{width: "50vh"}}>{zeroPad(MCP.MCPId, 4)}</td>
-                                <td style={{width: "70vh"}}>{MCP.MCPLocation}</td>
-                            </tr>                      
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+            {
+                firstAccess && <div id="table-content" className= "mt-10">
+                    <table>
+                        <thead className="border border-solid bg-gray-100">
+                            <tr>
+                                <th>No</th>
+                                <th>MCP ID</th>
+                                <th>MCP Location</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {currentPosts.map((MCP) => (
+                                <tr key={MCP.id}>
+                                    <td style={{width: "10vh"}}>{MCP.id}</td>
+                                    <td style={{width: "50vh"}}>{zeroPad(MCP.MCPId, 4)}</td>
+                                    <td style={{width: "70vh"}}>{MCP.MCPLocation}</td>
+                                </tr>                      
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                
+            }
 
-            <div id="pagination">
-                <ul>
-                    {pageNumbers.map(number => (
-                        <li key={number}>
-                            <a onClick={() => paginate(number)} href='#table-content'>
-                                {number}
-                            </a>
-                        </li>
-                    ))}              
-                </ul>
-            </div>
+            {firstAccess && <div id="pagination">
+                    <ul>
+                        {pageNumbers.map(number => (
+                            <li key={number}
+                                style= {number === currentPage ? {
+                                    color:  '#fff',
+                                    backgroundColor: '#000',
+                                } : {}}
+                            >
+                                <a 
+                                    onClick={() => paginate(number)} 
+                                    href='#table-content'>
+                                    {number}
+                                </a>
+                            </li>
+                        ))}              
+                    </ul>
+                </div>
+            }
 
         </div>
 
