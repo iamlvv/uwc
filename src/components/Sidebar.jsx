@@ -55,12 +55,12 @@ export default function Sidebar() {
           </div>
         </NavLink>
         <NavLink
-          to='/taskassignment'
+          to='/taskmanagement'
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <div className='flex my-5'>
             <div className='text-center' style={styles.icon}><AssignmentIcon /></div>
-            <div className='font-bold mx-2' style={styles.title}>Task Assignment</div>
+            <div className='font-bold mx-2' style={styles.title}>Task Management</div>
           </div>
 
         </NavLink>
