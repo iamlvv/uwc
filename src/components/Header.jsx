@@ -112,7 +112,7 @@ function Header(props) {
             <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="admin-avatar" className='w-10 h-10' style={styles.avatar} />
           </div>
           <div className=" font-bold text-black text-center">
-            <Link to='/'>
+            <Link to='/UserInfo'>
               <div className=" hover:text-white hover:bg-black rounded-full py-2 px-3 transition ease-in" style={styles.admin}>Admin</div>
             </Link>
           </div>
