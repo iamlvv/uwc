@@ -117,7 +117,7 @@ function Header(props) {
             </Link>
           </div>
           <div className="font-bold text-black py-2 text-center">
-            <Link>
+            <Link to='/Login'>
               <div className=" hover:text-white hover:bg-black rounded-full  py-2 px-3 transition ease-in">Log out</div>
             </Link>
           </div>

@@ -15,6 +15,7 @@ import JanitorTaskManagement from './pages/TaskManagement/JanitorTaskManagement'
 import RouteManagement from './pages/RouteManagement/RouteManagement';
 import RoutePlanning from './pages/RoutePlanning/RoutePlanning';
 import NotificationCenter from './pages/Notifications/NotificationCenter';
+import Login from './pages/Login/Login'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NotiJanitor from './pages/Notifications/NotiJanitor';
@@ -37,6 +38,7 @@ export default function App() {
           <Route path='/statistics' element={<Statistics />} />
           <Route path='/taskassign' element={<TaskAssign />} />
           <Route path='/userinfo' element={<UserInfo />} />
+          <Route path='login' element={<Login />}/>
           <Route path='/taskmanagement' element={<TaskManagement />} />
           <Route path='/taskmanagement/collectortask' element={<CollectorTaskManagement />} />
           <Route path='/taskmanagement/janitortask' element={<JanitorTaskManagement />} />
