@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add pages Task Management and Assignment for Collector and Janitor.
 - Add page Back Officer's Login.
 - Add project description in README.md.
+- Create report for Task 5: Implementation - Sprint 2.
 
 ### Changed
 
