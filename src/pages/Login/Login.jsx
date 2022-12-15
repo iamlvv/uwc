@@ -2,6 +2,7 @@ import React from 'react'
 import HeaderLogout from '../../components/HeaderLogout'
 import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
+import  { NavLink }  from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -21,7 +22,13 @@ export default function Login() {
                 <input type="password" className='border p-2' />
               </div>
 
-              <button className='border w-full my-5 py-2 bg-gray-600 hover:bg-gray-500 text-white'>Sign In</button>
+              <button className='border w-full my-5 py-2 bg-gray-600 hover:bg-gray-500 text-white'>
+                <NavLink
+                  to="/"
+                >
+                  <div>Sign in</div>
+                </NavLink>
+              </button>
 
               <div>
                 <p>Create an account</p>

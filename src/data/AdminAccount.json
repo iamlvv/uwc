@@ -1,0 +1,38 @@
+[
+    {
+        "username": "ntb-chau",
+        "password": "2012715",
+        "name": "Nhiếp Bảo Châu",
+        "id": "BO2012715"
+    },
+    {
+        "username": "hn-nhu",
+        "password": "2010495",
+        "name": "Huỳnh Ngọc Như",
+        "id": "BO2010495"
+    },
+    {
+        "username": "lv-vy",
+        "password": "2010805",
+        "name": "Lê Văn Vỹ",
+        "id": "BO2010805"
+    },
+    {
+        "username": "vpa-quan",
+        "password": "2014285",
+        "name": "Võ Phan Anh Quân",
+        "id": "BO2014285"
+    },
+    {
+        "username": "nt-hieu",
+        "password": "2013153",
+        "name": "Nguyễn Trí Hiếu",
+        "id": "BO2013153"
+    },
+    {
+        "username": "tcm-quan",
+        "password": "2012528",
+        "name": "Trần Công Minh Quân",
+        "id": "BO2012528"
+    }
+]
