@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import WeightMCP from '../../data/WeightMCP.json'
 import ReactPaginate from "react-paginate";
 import Header from '../../components/Header';

@@ -17,7 +17,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NotiJanitor from './pages/Notifications/NotiJanitor';
 import NotiCollector from './pages/Notifications/NotiCollector';
-import WidgetX from './pages/Notifications/Widget';
 export default function App() {
   return (
     <div className='App'>
@@ -27,7 +26,6 @@ export default function App() {
             <Header />
             <Sidebar />
             <Footer />
-            {/* <WidgetX /> */}
           </div>} />
           <Route path='/statistics/mcp' element={<MCP itemsPerPage={10} />} />
           <Route path='/statistics/employee' element={<Employee itemsPerPage={8} />} />

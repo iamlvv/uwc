@@ -6,7 +6,7 @@ import vehicle from '../../data/Vehicle.json'
 import { useState } from 'react'
 import ReactPaginate from "react-paginate";
 import car from '../../data/img/vehicle.png'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Footer from '../../components/Footer'
 function Items({ currentItems }) {
   return (

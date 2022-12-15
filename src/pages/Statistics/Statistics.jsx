@@ -1,10 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
-import { NavLink, Route, Routes } from 'react-router-dom'
-import Employee from './Employee'
-import Vehicle from './Vehicle'
-import MCP from './MCP'
 import StatisticsHeader from './StatisticsHeader'
 import Footer from '../../components/Footer'
 export default function Statistics() {
