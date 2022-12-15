@@ -25,7 +25,7 @@ export default function Sidebar() {
   const activeLink = "font-bold text-white bg-black";
   const normalLink = "hover:bg-black hover:text-white transition ease-in bg-white text-black";
   return (
-    <div className='w-72 h-[1000px] shadow-2xl pt-5 float-left rounded-xl' style={styles.sidebar}>
+    <div className='w-72 h-[1100px] shadow-2xl pt-5 float-left rounded-xl' style={styles.sidebar}>
 
       <div className='flex mb-5'>
         <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="admin-avatar" className='w-20 h-20 my-2 ml-5 mr-2' style={styles.avatar} />
