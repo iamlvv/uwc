@@ -2,12 +2,12 @@
 
 L04 - Vuot len 6 minh group: 
 
-1 Le Van Vy/
-2 Tran Cong Minh Quan/
-3 Vo Phan Anh Quan/
-4 Nhiep Thi Bao Chau/
-5 Nguyen Tri Hieu/
-6 Huynh Ngoc Nhu/
+1 Le Van Vy  
+2 Tran Cong Minh Quan  
+3 Vo Phan Anh Quan  
+4 Nhiep Thi Bao Chau  
+5 Nguyen Tri Hieu  
+6 Huynh Ngoc Nhu  
 
 ## Available Scripts
 
